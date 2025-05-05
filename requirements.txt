@@ -1,0 +1,5 @@
+crewai==0.117.0
+langchain-community
+duckduckgo-search
+langchain-google-genai
+python-dotenv
