@@ -1,28 +1,34 @@
 # 🌽 Market Agent - Análise de Mercado de Milho e Sementes
 
-Este projeto usa **CrewAI**, **LangChain** e a LLM gratuita **Gemini 2.0 Flash** para realizar uma análise automatizada do mercado de milho e da concorrência em sementes de milho.
+Este projeto usa **CrewAI**, **LangChain** e a LLM gratuita **Gemini 2.0 Flash** para realizar uma análise automatizada do mercado de milho e de sementes de milho.
 
 ## 🧠 Visão Geral
 
-Três agentes com tarefas distintas:
+Dois agentes com tarefas distintas:
 
 1. **Especialista em Mercado de Milho**: coleta informações atuais sobre tendências, preços e produção.
-2. **Analista de Concorrência**: identifica os principais concorrentes no setor de sementes de milho.
 3. **Gerador de Relatórios**: resume e formata os dados coletados em um relatório estratégico.
 
 ## 🗂️ Estrutura do Projeto
 
 ```
-market-agent/
-├── src/
-│   ├── __init__.py
-│   ├── agents.py
-│   ├── tasks.py
-│   └── main.py
-├── .env
-├── README.md
-├── .gitignore
-└── venv/
+.
+└── market-agent/
+    ├── src/
+    │   ├── __init__.py
+    │   ├── agents.py
+    │   ├── crew.py
+    │   ├── main.py
+    │   ├── tasks.py
+    │   └── tools/
+    │       ├── __init__.py
+    │       └── search.py
+    ├── README.md
+    ├── .env
+    ├── .gitignore
+    ├── LICENSE
+    ├── requirements.txt
+    └── venv/
 ```
 
 ## 🚀 Como Rodar o Projeto
@@ -48,22 +54,14 @@ venv\Scripts\activate    # Windows
 pip install -r requirements.txt
 ```
 
-Crie o arquivo `requirements.txt` com:
-
-```
-crewai
-langchain
-google-generativeai
-python-dotenv
-```
-
 ### 4. Configure a chave da API Gemini
 
 - Crie uma conta em https://aistudio.google.com/app/apikey
 - Copie a chave e coloque em um arquivo `.env`:
 
 ```
-GOOGLE_API_KEY=your_gemini_api_key
+GEMINI_API_KEY=your_gemini_api_key
+GEMINI_MODEL=choose_your_gemini_model
 ```
 
 ### 5. Execute
@@ -72,11 +70,11 @@ GOOGLE_API_KEY=your_gemini_api_key
 python src/main.py
 ```
 
-Você verá o relatório final no terminal!
+Você verá o relatório final salvo na pasta raiz do projeto, como `report-yyyy-mm-dd.md`!
 
 ## 📌 Requisitos
 
-- Python 3.9 ou superior
+- Python 3.10 ou superior
 - Internet para acessar a API do Gemini
 
 ## 🔮 Ideias Futuras
@@ -87,4 +85,4 @@ Você verá o relatório final no terminal!
 
 ---
 
-Feito com ❤️ para análises inteligentes no agro.
+### Gostou? Dê uma ⭐ no projeto.
