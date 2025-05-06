@@ -11,10 +11,10 @@ Dois agentes com tarefas distintas:
 
 #### O relatório é gerado de forma modular, com os seguintes tópicos:
 
-- Preços
-- Mercado Brasil
-- Mercado Global
-- Tendências e Previsões
+- Resumo executivo.
+- Visão geral do setor.
+- Oportunidades de mercado e ameaças.
+- Movimentos acionáveis.
 
 ## 🗂️ Estrutura do Projeto
 
