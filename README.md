@@ -1,13 +1,20 @@
-# 🌽 Market Agent - Análise de Mercado de Milho e Sementes
+# 🌽 Market Agent - Análise de Mercado de Grãos e Sementes
 
-Este projeto usa **CrewAI**, **LangChain** e a LLM gratuita **Gemini 2.0 Flash** para realizar uma análise automatizada do mercado de milho e de sementes de milho.
+Este projeto usa **CrewAI**, **LangChain** e a LLM gratuita **Gemini 2.0 Flash** para realizar uma análise automatizada do mercado de grãos e de sementes.
 
 ## 🧠 Visão Geral
 
 Dois agentes com tarefas distintas:
 
-1. **Especialista em Mercado de Milho**: coleta informações atuais sobre tendências, preços e produção.
-3. **Gerador de Relatórios**: resume e formata os dados coletados em um relatório estratégico.
+1. **Especialista em Mercado de Grãos**: coleta informações atuais sobre tendências, preços e produção.
+2. **Gerador de Relatórios**: resume e formata os dados coletados em um relatório estratégico.
+
+#### O relatório é gerado de forma modular, com os seguintes tópicos:
+
+- Preços
+- Mercado Brasil
+- Mercado Global
+- Tendências e Previsões
 
 ## 🗂️ Estrutura do Projeto
 
