@@ -16,6 +16,8 @@ Dois agentes com tarefas distintas:
 - Oportunidades de mercado e ameaças.
 - Movimentos acionáveis.
 
+![](https://raw.githubusercontent.com/josehenriqueroveda/josehenriqueroveda/refs/heads/master/assets/projects/market-agent.jpg)
+
 ## 🗂️ Estrutura do Projeto
 
 ```
