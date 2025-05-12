@@ -1,10 +1,9 @@
-from langchain_community.tools import DuckDuckGoSearchResults
+from langchain_community.tools import DuckDuckGoSearchRun
 from crewai.tools import tool
 
-news_tool = DuckDuckGoSearchResults(backend="news")
 
-
-@tool("DuckDuckGoSearch")
-def news_tool(search_query: str):
-    """Search the web for news of a given topic"""
-    return DuckDuckGoSearchResults().run(search_query)
+@tool("DuckDuckGo News Search")
+def search_grain_market_news(query: str) -> str:
+    """Search recent news about grain markets like corn, soy, and sorghum"""
+    search = DuckDuckGoSearchRun(backend="news")
+    return search.run(query)

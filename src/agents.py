@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from crewai import Agent, LLM
 from datetime import date
 
-from tools.search import news_tool
+from tools.search import search_grain_market_news
 
 load_dotenv()
 
@@ -32,7 +32,7 @@ searcher = Agent(
     llm=llm,
     verbose=True,
     allow_delegation=False,
-    tools=[news_tool],
+    tools=[search_grain_market_news],
 )
 
 writer = Agent(
@@ -54,7 +54,7 @@ writer = Agent(
     Você tem um forte entendimento do mercado de grãos e sementes, e é capaz de identificar tendências e oportunidades de negócios.\n
     Você é capaz de refinar o conteúdo gerado pelo Especialista em pesquisa de mercado de grãos, garantindo que o relatório final seja claro, objetivo e estratégico.\n
     """,
-    tools=[news_tool],
+    tools=[search_grain_market_news],
     llm=llm,
     verbose=True,
 )
